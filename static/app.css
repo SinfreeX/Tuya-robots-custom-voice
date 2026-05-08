@@ -1,0 +1,276 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f7f8;
+  --panel: #ffffff;
+  --text: #1b2428;
+  --muted: #617078;
+  --line: #d9e1e5;
+  --accent: #167c80;
+  --accent-2: #1f9d7a;
+  --danger: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 "Segoe UI", Arial, sans-serif;
+}
+
+.shell {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: end;
+  padding: 22px 0 26px;
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 44px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.sub {
+  margin: 12px 0 0;
+  color: var(--muted);
+  max-width: 620px;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.languageSwitch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #eef3f5;
+}
+
+button.langButton {
+  min-height: 30px;
+  padding: 0 10px;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+button.langButton:hover {
+  background: #dfe8eb;
+  color: var(--text);
+}
+
+button.langButton.active {
+  background: var(--panel);
+  color: var(--accent);
+  box-shadow: 0 1px 4px rgba(27, 36, 40, .12);
+}
+
+#jobBadge {
+  min-width: 86px;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: #e9f5f2;
+  color: #0b6b55;
+  font-weight: 700;
+}
+
+.panel, .metric {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(27, 36, 40, .05);
+}
+
+.panel {
+  padding: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.settingsGrid label {
+  margin: 0;
+}
+
+.settingsGrid span {
+  display: block;
+  margin-bottom: 7px;
+}
+
+input {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  min-height: 42px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover { background: #126b6f; }
+button:disabled { opacity: .55; cursor: wait; }
+
+button.secondary {
+  background: #e8eef1;
+  color: var(--text);
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.hint.tight {
+  margin-top: 3px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.metric {
+  padding: 14px 16px;
+}
+
+.metric span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+}
+
+.logHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.scanResults {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.scanRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfd;
+}
+
+.scanRow.confirmed {
+  border-color: rgba(31, 157, 122, .45);
+  background: #f1fbf7;
+}
+
+.scanRow strong,
+.scanRow span {
+  display: block;
+}
+
+.scanRow span {
+  margin-top: 3px;
+  color: var(--muted);
+}
+
+.empty {
+  margin: 0;
+  padding: 12px;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+pre {
+  min-height: 300px;
+  max-height: 520px;
+  overflow: auto;
+  margin: 14px 0 0;
+  padding: 14px;
+  border-radius: 6px;
+  background: #10181b;
+  color: #d8f3eb;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 13px/1.5 Consolas, "Cascadia Mono", monospace;
+}
+
+@media (max-width: 720px) {
+  .hero, .status { align-items: flex-start; }
+  .hero { flex-direction: column; }
+  .row, .grid, .scanRow, .settingsGrid { grid-template-columns: 1fr; }
+  h1 { font-size: 36px; }
+}

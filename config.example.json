@@ -1,0 +1,21 @@
+{
+  "robot": {
+    "device_id": "",
+    "ip": "",
+    "local_key": "",
+    "protocol_version": 3.3,
+    "voice_dp": 35,
+    "language_dp": 36
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8780,
+    "public_ip": "auto"
+  },
+  "voice": {
+    "default_source_folder": "",
+    "language_id_min": 8,
+    "language_id_max": 250,
+    "listen_seconds": 150
+  }
+}

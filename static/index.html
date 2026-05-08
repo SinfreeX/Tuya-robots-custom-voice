@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robot Voice</title>
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Tuya RP38</p>
+        <h1>Robot Voice</h1>
+        <p class="sub" data-i18n="hero.subtitle"></p>
+      </div>
+      <div class="status">
+        <div class="languageSwitch" aria-label="Language">
+          <button id="langEn" type="button" class="langButton active">EN</button>
+          <button id="langRu" type="button" class="langButton">RU</button>
+        </div>
+        <span id="jobBadge">idle</span>
+        <strong id="languageId">languageId: ...</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="logHead">
+        <div>
+          <h2 data-i18n="settings.title"></h2>
+          <p class="hint tight" data-i18n="settings.hint"></p>
+        </div>
+        <button id="saveSettingsBtn" type="button" class="secondary" data-i18n="settings.save"></button>
+      </div>
+      <div class="settingsGrid">
+        <label>
+          <span>Device ID</span>
+          <input id="deviceId" type="text" spellcheck="false" autocomplete="off" placeholder="bf...">
+        </label>
+        <label>
+          <span>Local Key</span>
+          <input id="localKey" type="password" spellcheck="false" autocomplete="off">
+        </label>
+        <label>
+          <span>Robot IP</span>
+          <input id="robotIpInput" type="text" spellcheck="false" autocomplete="off">
+        </label>
+      </div>
+    </section>
+
+    <section class="panel">
+      <label for="folder" data-i18n="folder.label"></label>
+      <div class="row">
+        <input id="folder" type="text" spellcheck="false">
+        <button id="startBtn" type="button" data-i18n="folder.start"></button>
+      </div>
+      <p class="hint" data-i18n="folder.hint"></p>
+    </section>
+
+    <section class="grid">
+      <div class="metric">
+        <span>Robot IP</span>
+        <strong id="robotIp">...</strong>
+      </div>
+      <div class="metric">
+        <span>HTTP port</span>
+        <strong id="serverPort">...</strong>
+      </div>
+      <div class="metric">
+        <span>Last ID</span>
+        <strong id="lastId">...</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="logHead">
+        <div>
+          <h2 data-i18n="scan.title"></h2>
+          <p class="hint tight" data-i18n="scan.hint"></p>
+        </div>
+        <button id="scanBtn" type="button" class="secondary" data-i18n="scan.button"></button>
+      </div>
+      <div id="scanResults" class="scanResults"></div>
+    </section>
+
+    <section class="panel">
+      <div class="logHead">
+        <h2 data-i18n="log.title"></h2>
+        <button id="statusBtn" type="button" class="secondary" data-i18n="log.status"></button>
+      </div>
+      <pre id="log"></pre>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
